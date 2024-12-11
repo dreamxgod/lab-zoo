@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ZooShop.Controllers
 {
-    [Route("/")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
