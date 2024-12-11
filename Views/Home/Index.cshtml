@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome to the Zoo Shop</h1>
+
+<p>This is the main dashboard for managing pets, orders, and pet types.</p>
+
+<div>
+    <h3>Navigate to:</h3>
+    <ul>
+        <li>
+            <a href="@Url.Action("Index", "Pet")">Manage Pets</a> - View, create, edit, and delete pets.
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Order")">Manage Orders</a> - View, create, edit, and delete orders.
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "PetType")">Manage Pet Types</a> - View, create, edit, and delete pet types.
+        </li>
+    </ul>
+</div>
+
+<p>Use the links above to manage your application.</p>

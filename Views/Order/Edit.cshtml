@@ -1,0 +1,27 @@
+@model ZooShop.Models.Order
+
+<h1>Edit Order</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="OrderItemId">Pet</label>
+        <select id="OrderItemId" name="OrderItemId" class="form-control">
+            @foreach (var pet in ViewData["Pets"] as IEnumerable<ZooShop.Models.Pet>)
+            {
+                <option value="@pet.Id" 
+                        selected="@(pet.Id == Model.OrderItemId ? "selected" : "")">
+                    @pet.Name
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Total">Total</label>
+        <input type="number" class="form-control" id="Total" name="Total" value="@Model.Total" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

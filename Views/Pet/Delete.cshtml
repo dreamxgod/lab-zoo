@@ -1,0 +1,11 @@
+@model ZooShop.Models.Pet
+
+<h1>Delete Pet</h1>
+
+<p>Are you sure you want to delete @Model.Name?</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "Pet")" class="btn btn-secondary">Cancel</a>
+</form>

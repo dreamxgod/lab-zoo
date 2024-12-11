@@ -1,0 +1,24 @@
+@model IEnumerable<ZooShop.Models.PetType>
+
+<h1>Pet Types</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var petType in Model)
+        {
+            <tr>
+                <td>@petType.Name</td>
+                <td>
+                    <a href="@Url.Action("Edit", "PetType", new { id = petType.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", "PetType", new { id = petType.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
